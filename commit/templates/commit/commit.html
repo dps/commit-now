@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="description" content="Commit Now, Act Tomorrow - Commit Now, Act Tomorrow is a web application for setting and meeting daily priorities.">
+	<meta name="author" content="Simon Leslie">
+	<meta name="viewport" content="device-width">
+	
+	<title>Commit Now | Act Tomorrow</title>
+
+{% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="{% static 'commit/css/normalise.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'commit/css/style.css' %}">
+<!-- 
+	<link type="image/png" rel="icon" href="img/favicon.ico">
+ -->
+
+	<!--[if lt IE 9]>
+		<script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+
+	<header>
+		<div class="logo_wrapper">
+		<a href="{% url 'commit:index' %}" id="logo" title="Commit Now">
+			<h1>Commit now</h1>
+			<h2>Act tomorrow</h2>
+		</a>
+		</div>
+		<nav>
+			<ul>
+				<li>
+					<a href="{% url 'commit:index' %}">Home</a>
+				</li>	
+				<li>
+					<a href="{% url 'commit:commit' %}" class="selected">Commit</a>
+				</li>	
+				<li>
+					<a href="{% url 'commit:about' %}">About</a>
+				</li>
+			</ul>
+		</nav>	
+	</header>
+	
+	<div class="form_wrap">
+		<form action="{% url 'commit:savecommit' %}" method="post">
+		{% csrf_token %}
+			<label for:"commit_text_input" class="commit_label">Make a commitment</label>
+			<textarea id="commit_text_input" name="commit_text_input" autofocus required rows="5" placeholder="Tomorrow, I will ..."></textarea>
+<!-- THE PRIVACY SETTINGS DON'T WORK YET ...
+			<fieldset class="privacy">
+				<label class="small_label">Privacy setting:</label>
+				<input type="radio" id="open" value="1" name="privacy" class="privacy_radio" checked><label for="False" class="small_label">Open</label>
+				<input type="radio" id="anon" value="0" name="privacy" class="privacy_radio"><label for="True" class="small_label">Private</label>
+			</fieldset>
+ -->
+			<button type="submit">Commit</button>
+		</form>
+	</div>
+	
+	<footer class="footer">
+		<div class="social">
+			<a href="https://www.facebook.com/s.t.leslie" target="_blank" class="social-btn facebook">Facebook</a>
+			<a href="https://www.twitter.com/slezzer" target="_blank" class="social-btn twitter">Twitter</a>
+		</div>	
+		<div class="copyright">
+					© 2014 Simon Leslie
+		</div>
+	</footer>
+	
+</body>
+</html>

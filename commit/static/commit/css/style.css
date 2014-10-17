@@ -1,0 +1,333 @@
+/*  GENRERAL
+*********************/
+
+html {
+	font-family: Arial, sans-serif;
+	background-color: #fff;
+}
+
+body {
+	margin: 0;
+	width: 100%;
+}
+
+.wrapper {
+	display: block;
+	margin: 117px auto 50px auto;
+	padding-top: 25px;
+	width: 100%;
+}
+
+/*  HEADER
+*********************/
+
+header {
+	background-color: #0090cc;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	z-index: 999;
+	display: block;
+}
+
+#logo {
+	text-align: center;
+	margin: 15px 15px 0px 0px;
+	color: #FFF;
+	text-decoration: none;
+}
+
+#logo h1 {
+	font-size: 2.75em;
+	padding: 0;
+	margin: 0;
+}
+
+#logo h2 {
+	font-size: 2em;
+	letter-spacing: 3px;
+	font-weight: normal;
+	padding: 0;
+	margin: 0;
+	display: none;
+}
+
+#logo:hover {
+	color: #003a52;
+}
+
+
+/*  NAVIGATION
+*********************/
+
+
+nav {
+	clear: both;
+	background-color: #0073a3;
+	font-size: 18px;
+	text-transform: uppercase;
+	padding-left: 15px;
+	text-align: center;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+nav li {
+	display: inline-block;
+	padding-right: 15px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+}
+
+nav li a {
+	color: #fff;
+	text-decoration: none;
+}
+
+nav li a:hover, nav li .selected {
+	color: #003a52;
+}
+
+
+
+/*  FOOTER
+*********************/
+
+footer {
+	background-color: #555;
+	font-size: 10px;
+	color: #e6e6e6;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: block;
+}
+
+.social {
+	padding-top: 10px;
+	padding-left: 20px;
+	padding-bottom: 10px;
+	float: left;
+}
+
+.copyright {
+	padding-top: 15px;
+	padding-right: 25px;
+	padding-bottom: 15px;
+	float: right;
+}
+
+.social-btn {
+	float: left;
+	height: 30px;
+	line-height: 30px;
+	width: 30px;
+	margin-left: 10px;
+	overflow: hidden;
+	text-indent: 30px;
+	background: url("../img/social.png") no-repeat;
+}
+
+.social-btn.facebook {
+	background-position: 5px 0px;
+}
+
+.social-btn.facebook:hover {
+	background-position: 5px -33px;
+}
+
+.social-btn.twitter {
+	background-position: -24px -2px;
+}
+.social-btn.twitter:hover {
+	background-position: -24px -35px;
+}
+
+/* ABOUT PAGE
+*********************/
+
+.about_photo {
+	display: block;
+	height: 100px;
+	width: 100px;
+	border-radius: 50%;
+	margin: 25px auto;
+}
+
+.about_text {
+	display: block;
+	margin: 0 auto;
+	width: 50%;
+	line-height: 1.5em;
+	padding: 5px 25px;
+}
+
+
+/* COMMITS
+*********************/
+
+.commit_container {
+	background: #0090cc;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 23px;
+	width: 50%;
+	z-index: 1;
+	border-radius: 25px;
+}
+ 
+.commit_text {
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 15px;
+}
+
+.commit_user {
+	padding-left: 30px;
+	padding-right: 30px;
+	text-align: right;
+	font-style: italic;
+}
+
+.commit_date {
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-bottom: 15px;
+	text-align: right;
+	font-style: italic;
+}
+
+
+/*  FORMS
+*********************/
+
+.form_wrap {
+	display: block;
+	margin: 117px auto 50px auto;
+	padding-top: 25px;
+	width: 75%;
+}
+
+form {
+	display: block;
+	background-color: #0090cc;
+	border-radius: 25px;
+	padding: 5% 0;
+}
+
+.commit_label {
+	text-align: center;
+	font-size: 2em;
+	color: #003a52;
+	margin: 0 auto;
+	display: block;
+}
+
+textarea {
+	display: block;
+	color: #003a52;
+	margin: 25px auto;
+	width: 75%
+}
+
+button {
+	display: block;
+	margin: 25px auto;
+	background-color: #0073a3;
+	border-style: none;
+	color: 003a52;
+	font-size: 1.5em;
+	padding: 15px;
+	border-radius: 10px;
+}
+
+.privacy {
+	color: #333;
+	font-weight: light;
+	border-style: none;
+	margin: -10px 12.5% 0 0;
+	text-align: right;
+}
+
+.privacy_radio {
+	height: 10px;
+	width: 10px;
+	vertical-align: middle;
+}
+
+.small_label {
+	font-size: 0.75em;
+	margin-left: 5px;
+}
+
+
+/*  MEDIA QUERIES
+*********************/
+
+
+@media screen and (min-width: 675px) {
+	
+	header {
+		border-bottom-style: solid;
+		border-bottom-width: 20px;
+		border-bottom-color: #0073a3;
+	}
+
+	.form_wrap {
+		width: 506px;
+	}
+	
+	.wrapper {
+		margin-top: 137px;
+		width: 100%;
+	}
+
+	#logo {
+		text-align: left;
+		float: left;
+		margin: 15px;
+	}
+	
+	#logo h2 {
+		display: block;
+	}
+	
+	nav {
+		clear: none;
+		float: right;
+		text-align: right;
+		margin: 45px 15px 0px 0px;
+		background-color: #0090cc;
+		width: initial;
+	}
+}
+
+@media screen and (min-width: 900px) {
+
+	.about_photo {
+		display: block;
+		float: left;
+	}
+	
+	.about_text {
+		float: left;
+		width: 35%;
+		margin-left: 25px;
+		margin-bottom: 50px;
+		border-left: solid 2px #0090cc;
+	}	
+	
+	.centre_wrap {
+		display: block;
+		min-width: 900px;
+		width: 80%;
+		margin: auto;
+		vertical-align: middle;
+	}
+}
+	
